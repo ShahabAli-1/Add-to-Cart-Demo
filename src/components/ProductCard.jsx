@@ -1,19 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { PLACE_HOLDER_IMAGE } from "../constants/constants";
 
 const ProductCard = ({ product, addToCart }) => {
+  const [imgSrc, setImgSrc] = useState(
+    product.image && product.image.trim() ? product.image : PLACE_HOLDER_IMAGE
+  );
+
+  const handleImageError = () => {
+    if (imgSrc !== PLACE_HOLDER_IMAGE) {
+      setImgSrc(PLACE_HOLDER_IMAGE);
+    }
+  };
+
   return (
     <div className="product-card">
       <div className="product-image-container">
         <img
-          src={
-            product.image && product.image.trim()
-              ? product.image
-              : PLACE_HOLDER_IMAGE
-          }
+          src={imgSrc}
           alt={product.title || "Product Image"}
           className="product-image"
+          onError={handleImageError}
         />
         <button
           className="add-to-cart-btn"
