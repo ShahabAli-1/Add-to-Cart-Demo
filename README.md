@@ -1,8 +1,19 @@
-# React + Vite
+# How to Run
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Step 1
+## Download or clone the repo on your machine
 
-Currently, two official plugins are available:
+# Step 2
+ Navigate to the project root directory and run the command 
+ ## npm install
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Step 3
+ Create an .env.local file in the root directory of the project with the following credentials
+ VITE_API_URL=your shopify storefront api
+ VITE_API_TOKEN=your storefront access key
+
+# Step 4
+ Run the command 
+ ## npm run dev
+
+ 
